@@ -11,7 +11,7 @@ h1 {
     color:darkblue;
     text-align: center;
 }
-img {
+main img {
     width: 150px;
     height: auto;
     border: 1px solid black;
@@ -24,10 +24,6 @@ p {
 main {
     max-width: 840px;
     margin: 10px;
-}
-main img{
-    width: 150px;
-    height: auto;
 }
 
 aside {
