@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | W02 | Course Home Page Enhancement</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css">
+  <script src="https://js-cdn.dynatrace.com/jstag/16294a69b33/bf29241ovs/692a19d31f48cd0e_complete.js"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 130<span id="coursetitle">: Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span class="active"><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+
+    <h2>W02 Assignment: Home Page Enhancement</h2>
+    <h3>Overview</h3>
+    <p>In this assignment you will apply the learning activity concepts to enhance your home page with HTML standards,
+      CSS, and testing with the W3C validators.</p>
+
+    <h3>Instructions</h3>
+    <h4 class="step">Learning Activity</h4>
+    <div class="callout warning">
+      <p>
+        If you have not completed the <a href="prepare-css-introduction.html">An Introduction to CSS</a> learning
+        activity, do so now or you will have difficulty following the instructions below and passing the page audit.
+      </p>
+    </div>
+    <h4 class="step">HTML: Add &lt;head&gt; meta Elements</h4>
+    <ol>
+      <li>Open your course home page, <strong>index.html</strong> for editing.</li>
+      <li>Add two new meta tags to your <code>head</code> section, namely after the <code>title</code> and
+        before the CSS external file <code>link</code> element. These will be the meta description and the meta
+        author.
+        <pre><code class="html">&lt;meta name="description" content="Describe your home page here using keywords like your name, the course, the purpose of the page."&gt;
+&lt;meta name="author" content="Your name"&gt;</code></pre>
+        <div class="callout info">
+          <p><strong>Description</strong><br>"Specifying a description that includes keywords
+            relating to the content of your page is useful as it has the potential to make your page
+            appear higher in relevant searches performed in search engines" &ndash; MDN</p>
+          <p><strong>Author</strong><br>"Specifying an author is beneficial in many ways: it is
+            useful to be able to understand who wrote the
+            page, if you have any questions about the content and you would like to contact them.
+            Some content management systems have facilities to automatically extract page author
+            information and make it available for such purposes." &ndash; MDN</p>
+        </div>
+      </li>
+    </ol>
+    <h4 class="step">HTML: &lt;body&gt;</h4>
+    <ol>
+
+      <li>In the <code>body</code> section, add an <code>aside</code> element after the existing
+        <code>main</code> element and before the <code>footer</code>.
+      </li>
+      <li>In the <code>aside</code> element, add the following child elements and element content:
+        <ul class="check">
+          <li><code>h2</code> &ndash; Your state or country.</li>
+          <li><code>img</code> &ndash; A picture that can represent your state or country.
+            <div class="callout warning">
+              <p>Remember that all images must be <a href="../week01/prepare-images.html" target="_blank">optimized</a>.
+                <br>This image cannot be more than 100kB in file size.
+              </p>
+            </div>
+          </li>
+          <li><code>p</code> &ndash; A brief paragraph describing your state or country.</li>
+        </ul>
+        <details>
+          <summary>Check Your Understanding &ndash; Example</summary>
+          <pre><code class="html">...
+&lt;/main&gt;
+&lt;aside&gt;
+  &lt;h2&gt;Utah&lt;/h2&gt;
+  &lt;img src="images/utah.jpg" alt="Utah landscape"&gt;
+  &lt;p&gt;Utah is a state in the western United States. It is bordered by Colorado to the east, Wyoming to the northeast, Idaho to the north, Arizona to the south, and Nevada to the west. It also touches a corner of New Mexico in the southeast. The state is a center of transportation, education, information technology, and research, and a major tourist destination for outdoor recreation. Salt Lake City, the state capital and largest city, is home to the headquarters of The Church of Jesus Christ of Latter-day Saints (LDS Church).&lt;/p&gt;
+&lt;/aside&gt;
+&lt;footer&gt;
+  ...</code></pre>
+        </details>
+      </li>
+    </ol>
+    <h4 class="step">CSS</h4>
+    <ol>
+      <li>Open the <strong>styles.css</strong> file for editing.</li>
+      <li>Add a CSS declaration to the <code>main</code> selector to limit its width for now.
+        <details>
+          <summary>Check Your Understanding &ndash; Example</summary>
+          <pre><code class="css">main {
+  max-width: 840px;
+}</code></pre>
+        </details>
+      </li>
+      <li>Add CSS declarations for the following properties for an <code>aside</code> element
+        selector.
+        <ul class="check">
+          <li>width</li>
+          <li>margin</li>
+          <li>border</li>
+          <li>padding</li>
+          <li>background color</li>
+          <li>color
+            <div class="callout info">Be sure to check the contrast ratio between your foreground
+              and background colors. <a href="https://contrast-ratio.com/" target="_blank">contrast-ratio.com</a></div>
+          </li>
+        </ul>
+        <details>
+          <summary>Check Your Understanding &ndash; Example</summary>
+          <pre><code class="css">aside {
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2); /* 1️⃣ */
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+}</code></pre>
+          <p>
+            1️⃣ The border color uses the preferred rgb color method in order to take advantage of a subtle,
+            transparent border effect. The RGB value consists of four values: red, green, blue, and
+            alpha. The first three values (0, 0, 0) represent black, and the last value, .2 (20%)
+            represents the alpha or opacity of the color. An alpha
+            value of .2 means that the color is mostly transparent, allowing the background to show
+            through. By using this border color, the border appears very light and barely
+            noticeable, while still providing a subtle visual cue that helps to separate elements on
+            a webpage.
+            Additionally, it can help to add a layer of visual interest to the design without being
+            overly distracting or detracting from the overall layout.</p>
+        </details>
+
+      </li>
+      <li>Set the <code>img</code> inside the <code>aside</code> to have a width of 200 pixels and a
+        height of auto.
+        <div class="callout info">
+          <p>This auto setting ensures that we do not change the images aspect ratio.<br> Why
+            is that important?</p>
+        </div>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="css">aside img {
+  width: 200px;
+  height: auto;
+}</code></pre>
+          <p>Changing the native aspect ratio of an image will distort or pixelate the image.</p>
+        </details>
+
+      </li>
+
+      <li>To not allow the existing <code>img</code> CSS selector to affect this new image, change
+        the selector for the existing profile <code>img</code> to be more exclusive by adding the
+        <code>main</code> parent selector.
+        <pre><code class="css">main img {
+  width: 150px;
+  height: auto;
+  ...
+}</code></pre>
+      </li>
+      <li>Change the existing paragraph <code>p</code> padding property value to 0
+        pixels.<br><em>Note that any 0 value does not need to specify the units.</em>
+        <pre><code class="css">p { padding: 0;}</code></pre>
+      </li>
+      <li>Apply CSS to the <code>&lt;footer&gt;</code> element to 1️⃣add a top margin to separate it
+        from the <code>main</code> element content, 2️⃣add a top border to design additional
+        distinction from the <code>main</code> content, and 3️⃣align any text in the
+        <code>footer</code> to the center of its content box.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="css">footer {
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
+}</code></pre>
+          <p><strong>Explanation</strong><br>
+            <code>margin-top</code> specifies just the top of the element to have a margin of 15
+            pixels.<br>
+            <code>border-top</code> uses a <a href="https://www.w3schools.com/csS/css_border_shorthand.asp"
+              target="_blank">shorthand</a> property list to set the border-width, border-style, and
+            border-color in one declaration versus three.<br>
+            <code>text-align</code> sets the text alignment to center.
+          </p>
+
+        </details>
+      </li>
+      <li>Test your page locally in your browser often using the <strong>Live/Five Server</strong> extension
+        in VS Code which renders the page in your default browser as a web page.</li>
+      <li>Be sure to <strong>Save</strong> your work.</li>
+    </ol>
+
+    <div class="callout info">
+      <h4>Help</h4>
+      <p>
+        Video Demonstration: ▶️ <a href="https://video.byui.edu/media/t/1_5xptpphz" target="_blank">Home Page
+          Enhancement</a> &ndash; <span class="smaller">[ 10.00 minutess ]</span>
+      </p>
+    </div>
+
+    <h4 class="step">Test, Fix, and Update</h4>
+    <ul>
+      <li>Commit and Sync your changes to your GitHub Pages enabled wdd130 repository.</li>
+      <li>Use this &#10004; <a href="../grader/w02-homepage.html" target="_blank">Page Audit</a> tool to self check some
+        of the basic requirements.</li>
+      <li>Fix any issues based upon the feedback.</li>
+      <li>Remember that you will need to commit and sync your changes to your GitHub repository and re-run the Page Audit tool until your page passes
+      all checks after making any updates/changes.</li>
+
+    </ul>
+    <div class="callout info">
+      <p>If you encounter any issues or are not sure how to fix an item listed as incorrect, please reach out for help
+        on Microsoft Teams in the <strong>Week 02 Forum</strong> channel.</p>
+    </div>
+    <h3>Submission</h3>
+    <ol class="check">
+      <li>Return to Canvas to submit your wdd130 GitHub Pages home page URL:
+        <pre><code class="cli">https://<em>your-username</em>.github.io/wdd130</code></pre>
+      </li>
+    </ol>
+    <div class="callout warning">
+      <p>❌ Wrong submission: <code>https://github.com/your-username/wdd130</code></p>
+      <p>❌ Wrong submission: Anything starting with <code>http://127.0.0.1</code></p>
+
+    </div>
+
+
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/prevent-code-select.js"></script>
+</body>
+
+</html>
