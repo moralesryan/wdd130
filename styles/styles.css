@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -12,6 +17,7 @@ h1 {
     text-align: center;
 }
 main img {
+    float: right;
     width: 150px;
     height: auto;
     border: 1px solid black;
@@ -27,12 +33,16 @@ main {
 }
 
 aside {
-    width: 500px;
-    margin: 1rem;
-    border: 1px solid rgb(0, 0, 0 / 0.2);
-    padding: 10px;
-    background-color: white;
-    color: black;
+    position: relative;
+    width: 29rem;
+    text-align: center;
+}
+
+aside h2 {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    color: white;
 }
 
 aside img{
@@ -46,3 +56,12 @@ footer{
     text-align: center;
 }
 
+/* CSS class selectors */
+
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(0, 0, 0 / 0.2);
+    background-color: #ddd;
+    color: black;
+}
