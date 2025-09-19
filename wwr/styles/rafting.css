@@ -64,7 +64,7 @@ h1 {
 
 article {
     position: absolute;
-    bottom: 268px;
+    bottom: 10px;
     width: 96%;
     padding: 16px;
     text-align: center;
@@ -72,6 +72,7 @@ article {
     background-color: var(--accent-color);
     color: rgb(255, 251, 207);  
 }
+/* I put the text and the hero article at the bottom of the image so it doesn't cover the main part of the image */
 
 article p {
     text-align: left;
