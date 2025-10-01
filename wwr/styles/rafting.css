@@ -38,12 +38,12 @@ header img {
    text-align: center;
 }
 
-.history p1 {
+.history1 {
     grid-column: 1;
     grid-row: 2;
 }
 
-.history p2 {
+.history2 {
     grid-column: 3;
     grid-row: 2;
  }
