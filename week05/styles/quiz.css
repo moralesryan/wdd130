@@ -1,0 +1,36 @@
+main {
+    margin: auto;
+    font-family:'Times New Roman', Times, serif
+}
+
+
+form {
+    background-color: rgb(204, 213, 203);
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    justify-content: center;
+    margin: auto;
+}
+
+.examplecode {
+    background-color: rgb(116, 113, 113);
+    color: white;
+    margin-left: 2rem;
+    margin-right: 30rem;
+    padding-left: .25rem;
+}
+
+button {
+    background-color: rgb(182, 182, 182);
+    border-radius: .5rem;
+    border-color: rgb(165, 165, 165);
+}
+
+input, label, textearea, select, button {
+    margin: 7.5px;
+}
+
+span {
+    
+}
