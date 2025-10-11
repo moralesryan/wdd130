@@ -1,5 +1,5 @@
 :root { 
-    --primary-color: #76b993; 
+    --primary-color: #839b8e; 
     --secondary-color: #ece2a5; 
     --accent-color: #2a2a2a;
     --heading-font: 'Times New Roman', sans-serif;
@@ -21,6 +21,27 @@ header img {
     justify-self: center;
     width: 10rem;
     height: auto;
+}
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #5a7165;
+  border-radius: 3.2px;
 }
 
 .history {
@@ -55,19 +76,6 @@ header img {
     align-self: start;
     max-width: 100%;
  }
-
-header {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    background-color: #f2f8f5; 
-}
-
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
 
 header, main, footer {
     width: 100%;
