@@ -17,10 +17,9 @@ body {
     color: var(--accent-color)
 }
 
-header img {
-    justify-self: center;
-    width: 10rem;
-    height: auto;
+header, main, footer {
+  width: 100%;
+  margin: 0 auto;
 }
 
 header {
@@ -33,15 +32,33 @@ header {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
   background-color: #5a7165;
   border-radius: 3.2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  justify-self: center;
+  width: 10rem;
+  height: auto;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
 }
 
 .history {
@@ -83,18 +100,13 @@ header, main, footer {
 }
 
 h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+  font-family: var(--heading-font);
+  color: var(--primary-color);
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-main {
-    display: grid;
-    
+p, section {
+  margin: 16px;
+  padding: 8px;
 }
 
 .hero{
@@ -135,7 +147,8 @@ main {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.9;
+    font-size: 60px;
     background-color: var(--accent-color);
 }
 
@@ -144,28 +157,49 @@ section h2 {
     margin: 10px;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between; 
-}
-.socialmedia a {
-    text-decoration: none;
-    position: right;
-    margin: 5px;
-}
-
-article {
-    position: absolute;
+article{
+    position:absolute;
     bottom: 10px;
-    width: 96%;
-    padding: 16px;
+    width: 100%;
+    padding: 16px;   
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.9;
     background-color: var(--accent-color);
-    color: rgb(255, 251, 207);  
+    color: rgb(244, 244, 244);  
 }
 
-/* I put the text and the hero article at the bottom of the image so it doesn't cover the main part of the image */
+.hero article p {
+    font-size: 30px;
+    text-align: center;
+}
+
+footer {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.socialmedia a {
+  margin-left: 1rem;
+}
+
+.socialmedia{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.socialmedia img {
+  width: 50px;
+  height: 50px;
+}
 
 article p {
     text-align: left;
@@ -173,6 +207,222 @@ article p {
 
 .hero article img {
     float: right;
-    width: 145px;
+    width: 20rem;
+}
+
+/* Contact CSS */
+
+.employees-section {
+  background-color: #f4fdf7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.employee-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.employee-img {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.employee {
+  text-align: center;
+  max-width: 200px;
+}
+
+.employee p {
+  margin-top: -1rem;
+}
+
+.employee-cards p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+}
+
+.contact-form {
+  background-color: #f4fdf7;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.employee img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.map, img {
+  width: 300px;
+  height: 300px;
+}
+
+.map iframe {
+  width: 450px;
+  height: 450px;
+  border: 10px;
+  border-radius: 10px;
+}
+
+.contact-info {
+  text-align: center;
+  background-color: #f4fdf7;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.map, img {
+  width: 300px;
+  height: 300px;
+}
+
+.map iframe {
+  width: 450px;
+  height: 450px;
+  border: 10px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  background-color: #f4fdf7;
+  padding: 2rem;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 0.6rem;
+  border: 1.3px solid black;
+  border-radius: 5px;
+}
+
+.contact-form label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map {
+  width: 35%;
+  padding-top: 2rem;
+}
+
+.contact-form {
+  background-color: #f4fdf7;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+button {
+  background-color:#a4cfa370;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Home CSS */
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4fdf7;
+}
+
+form {
+    width: 30rem;
+    max-width: 600px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.newsletter-form {
+  background-color: #f4fdf7;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero article button a{
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.hyperlink {
+    position:absolute;
+    bottom: 10rem;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.9;
+    color: rgb(244, 244, 244);  
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f4fdf7;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.grid-item h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.grid-item p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
