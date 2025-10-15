@@ -456,3 +456,106 @@ form {
   color: white;
 }
 
+/* Trips CSS */
+
+.trips-hero{
+    position: relative;
+}
+
+.trips-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.trips-hero article button{
+  padding: 2rem;
+}
+
+.trips-hero article button a{
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.trips-hero h2 {
+  font-size: 55px;
+  margin: 10px;
+  padding: 1rem;
+}
+
+.trips-hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.9;
+    font-size: 60px;
+    background-color: var(--accent-color);
+}
+
+.trip-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f4fdf7;
+  text-align: center;
+}
+
+.trip-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.trip-item h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.trip-item p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: white;
+}
+
+.trip-table {
+  padding: 2rem;
+  background-color: #f4fdf7;
+  text-align: center;
+}
+
+.trip-table h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.trip-table th, .trip-table td {
+  border: 1px solid #000000;
+  padding: 1rem;
+}
+
+.trip-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.trip-table td {
+  color: var(--primary-color);
+}
