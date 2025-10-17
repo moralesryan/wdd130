@@ -559,3 +559,35 @@ form {
 .trip-table td {
   color: var(--primary-color);
 }
+
+/* Base layout (desktop) */
+header, nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .trip-section {
+    display: grid;
+    grid-template-columns: 1fr; /* stack trip items vertically */
+  }
+
+  table {
+    font-size: 0.9rem;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
